@@ -1,5 +1,5 @@
 import tailwind from "bun-plugin-tailwind";
-import { rm } from "node:fs/promises";
+import { cp, rm } from "node:fs/promises";
 
 await rm("dist", { recursive: true, force: true });
 
@@ -19,5 +19,8 @@ if (!result.success) {
   for (const log of result.logs) console.error(log);
   process.exit(1);
 }
+
+// Static files (cv.pdf, og.png, ...) are copied as-is to the site root.
+await cp("public", "dist", { recursive: true }).catch(() => {});
 
 console.log(`Built ${result.outputs.length} files to dist/`);
