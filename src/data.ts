@@ -68,7 +68,7 @@ export const profile = {
     { key: "lang", value: "English (native) · French (fluent)" },
   ] satisfies WhoAmI[],
 
-  bio: "I'm a second year apprentice building full-stack web apps with Laravel and TypeScript. Right now I'm going deeper on Laravel: queues, scheduled jobs and PostgreSQL backed features like pgvector search and full text search",
+  bio: "I'm a second year apprentice building full-stack web apps with Laravel and TypeScript. Right now I'm going deeper on Laravel: queues, scheduled jobs and PostgreSQL backed features like pgvector search and full text search.",
 
   cv: {
     label: "Download CV",
