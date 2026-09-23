@@ -188,6 +188,15 @@ html.dark {
 }
 
 @layer base {
+  html,
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
   body {
     @apply font-sans antialiased;
     margin: 0;
