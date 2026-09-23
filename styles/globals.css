@@ -36,9 +36,9 @@
   --sidebar-accent-foreground: oklch(1.0000 0 0);
   --sidebar-border: oklch(0.8083 0.0174 271.1982);
   --sidebar-ring: oklch(0.5547 0.2503 297.0156);
-  --font-sans: Montserrat, sans-serif;
+  --font-sans: "Fira Code", ui-monospace, monospace;
   --font-serif: Georgia, serif;
-  --font-mono: Fira Code, monospace;
+  --font-mono: "Fira Code", ui-monospace, monospace;
   --radius: 0.35rem;
   --shadow-x: 0px;
   --shadow-y: 4px;
@@ -91,9 +91,9 @@
   --sidebar-accent-foreground: oklch(0.2429 0.0304 283.9110);
   --sidebar-border: oklch(0.4037 0.0320 280.1520);
   --sidebar-ring: oklch(0.7871 0.1187 304.7693);
-  --font-sans: Montserrat, sans-serif;
+  --font-sans: "Fira Code", ui-monospace, monospace;
   --font-serif: Georgia, serif;
-  --font-mono: Fira Code, monospace;
+  --font-mono: "Fira Code", ui-monospace, monospace;
   --radius: 0.35rem;
   --shadow-x: 0px;
   --shadow-y: 4px;
@@ -217,37 +217,4 @@ html.dark {
   .animate-blink {
     animation: none;
   }
-}
-
-@layer components {
-  .wid-tree { font-family: var(--font-mono); font-size: .92rem; }
-  .wid-tree ul { list-style: none; margin: 0; padding: 0; }
-  .wid-tree ul ul {
-    margin-left: .55rem;
-    padding-left: 1.2rem;
-    border-left: 1px solid var(--border);
-  }
-  .wid-tree li { position: relative; padding: .18rem 0; }
-  .wid-tree ul ul > li::before {
-    content: "";
-    position: absolute;
-    left: -1.2rem; top: .95em;
-    width: .85rem;
-    border-top: 1px solid var(--border);
-  }
-  .wid-tree summary {
-    list-style: none;
-    cursor: pointer;
-    color: var(--accent);
-    border-radius: 4px;
-    width: fit-content;
-    padding: 0 .3rem;
-  }
-  .wid-tree summary::-webkit-details-marker { display: none; }
-  .wid-tree summary::before { content: "▸ "; color: var(--muted-foreground); }
-  .wid-tree details[open] > summary::before { content: "▾ "; }
-  .wid-tree summary:hover { background: var(--muted); }
-  .wid-tree summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-  .wid-tree .file { color: var(--muted-foreground); padding-left: .3rem; }
-  .wid-tree .file::before { content: "· "; color: var(--border); }
 }

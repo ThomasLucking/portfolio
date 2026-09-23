@@ -2,23 +2,37 @@ import { profile } from "@/data";
 
 export function Skills() {
   return (
-    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 list-none m-0 p-0">
-      {profile.skills.map((skill) => (
-        <li
-          key={skill.name}
-          className="flex items-center gap-3 p-4 min-h-11 border border-border rounded-lg bg-card transition-colors duration-150 hover:border-primary/50 hover:bg-muted/50"
+    <dl className="grid gap-4 m-0">
+      {profile.skillGroups.map((group) => (
+        <div
+          key={group.label}
+          className="grid gap-2 min-[521px]:grid-cols-[110px_1fr] min-[521px]:items-start"
         >
-          <img
-            src={skill.icon}
-            alt=""
-            width={22}
-            height={22}
-            className={`size-[22px] shrink-0 object-contain${skill.invert ? " dark:invert" : ""}`}
-          />
-          <span className="font-mono text-[13.5px] truncate">{skill.name}</span>
-        </li>
+          <dt className="text-[13px] text-muted-foreground min-[521px]:pt-1.5">
+            {group.label}
+          </dt>
+          <dd className="m-0">
+            <ul className="flex flex-wrap gap-2 list-none m-0 p-0">
+              {group.skills.map((skill) => (
+                <li
+                  key={skill.name}
+                  className="flex items-center gap-2 px-3 py-1.5 border border-border rounded-md bg-card"
+                >
+                  <img
+                    src={skill.icon}
+                    alt=""
+                    width={16}
+                    height={16}
+                    className={`size-4 shrink-0 object-contain${skill.invert ? " dark:invert" : ""}`}
+                  />
+                  <span className="text-[13px]">{skill.name}</span>
+                </li>
+              ))}
+            </ul>
+          </dd>
+        </div>
       ))}
-    </ul>
+    </dl>
   );
 }
 
