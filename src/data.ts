@@ -33,22 +33,17 @@ export type SkillGroup = {
 
 export type Project = {
   name: string;
-  /** one-line pitch */
   pitch: string;
-  /** one sentence on something hard you solved / what you did yourself */
   highlight: string;
-  /** e.g. "group project", "personal" */
   context: string;
   stack: readonly string[];
   github: string;
   live?: string;
-  /** optional screenshot, import it like the svgs above */
   image?: string;
 };
 
 export type Contact = {
   kind: "link" | "copy";
-  /** platform name, used for accessible labels */
   label: string;
   icon: string;
   invert?: boolean;
@@ -73,9 +68,8 @@ export const profile = {
     { key: "lang", value: "English (native) · French (fluent)" },
   ] satisfies WhoAmI[],
 
-  bio: "I'm a second-year apprentice building full-stack web apps with Laravel and TypeScript, from project trackers and ticketing systems to a local RAG pipeline. Right now I'm going deeper on Laravel: queues, scheduled jobs and PostgreSQL-backed features like pgvector search.",
+  bio: "I'm a second year apprentice building full-stack web apps with Laravel and TypeScript. Right now I'm going deeper on Laravel: queues, scheduled jobs and PostgreSQL backed features like pgvector search and full text search",
 
-  // Drop the PDF at public/cv.pdf — it is copied to the site root on build.
   cv: {
     label: "Download CV",
     href: "cv.pdf",
