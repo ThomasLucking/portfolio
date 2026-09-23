@@ -50,7 +50,7 @@ export const profile = {
     { key: "name", value: "Thomas Lucking" },
     { key: "base", value: "Leysin, Switzerland" },
     { key: "stack", value: "TypeScript, React, Bun, Laravel" },
-    { key: "role", value: "Backend Developer" },
+    { key: "role", value: "Junior Developer" },
   ] satisfies WhoAmI[],
 
   intro: {
@@ -60,7 +60,11 @@ export const profile = {
   },
 
   services: [
-    { name: "fullstack", files: ["typescript.ts", "react.tsx", "elysia.ts"], open: true },
+    {
+      name: "fullstack",
+      files: ["typescript.ts", "react.tsx", "elysia.ts"],
+      open: true,
+    },
     { name: "backend", files: ["bun.ts", "laravel.php", "postgres.sql"] },
     { name: "frontend", files: ["react.tsx", "vue.vue", "tailwind.css"] },
     { name: "database", files: ["postgres.sql", "drizzle.config.ts"] },
@@ -86,26 +90,26 @@ export const profile = {
     {
       kind: "link",
       icon: gmailIcon,
-      value: "telucking@gmail.com", 
-      href: "mailto:telucking@gmail.com", 
+      value: "telucking@gmail.com",
+      href: "mailto:telucking@gmail.com",
     },
     {
       kind: "link",
       icon: githubIcon,
       invert: true,
-      value: "Thomas Lucking", 
-      href: "https://github.com/ThomasLucking", 
+      value: "Thomas Lucking",
+      href: "https://github.com/ThomasLucking",
     },
     {
       kind: "link",
       icon: linkedinIcon,
-      value: "Thomas Lucking", 
-      href: "https://www.linkedin.com/in/thomas-lucking-55a20a341/", 
+      value: "Thomas Lucking",
+      href: "https://www.linkedin.com/in/thomas-lucking-55a20a341/",
     },
     {
       kind: "copy",
       icon: discordIcon,
-      value: "ThomasLucking", 
+      value: "ThomasLucking",
     },
   ] satisfies Contact[],
 } as const;
